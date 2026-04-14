@@ -2516,7 +2516,7 @@ function saveApiKey(key) {
 // ── Settings screen ──────────────────────────────────────────
 function goSettings() {
   // Config is now centralized in login.html
-  window.location.href = "login-P10.html";
+  window.location.href = "T07.html";
 }
 
 function updateApiKeyStatus(key) {
@@ -3794,14 +3794,14 @@ setTimeout(function() {
   var _origGoOfficer = goOfficer;
   goOfficer = function() {
     var user = getSession();
-    if(!user){ window.location.href="login-P10.html"; return; }
+    if(!user){ window.location.href="T07.html"; return; }
     _origGoOfficer();
   };
 
   var _origGoAdmin = goAdmin;
   goAdmin = function() {
     var user = getSession();
-    if(!user){ window.location.href="login-P10.html"; return; }
+    if(!user){ window.location.href="T07.html"; return; }
     var role = (user.role||"oficial").toLowerCase();
     if(role==="oficial"){
       showAccessDenied("Solo supervisores y administradores pueden acceder al panel de administración.");
